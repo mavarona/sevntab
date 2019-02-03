@@ -31,8 +31,6 @@ module.exports = (sequelize, DataTypes) => {
     })
 
     User.prototype.comparePassword = function(password) {
-        console.log('password', password)
-        console.log('this.password', this.password)
         return bcrypt.compareSync(password, this.password)
     }
 
